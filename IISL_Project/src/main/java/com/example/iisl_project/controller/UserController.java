@@ -3,6 +3,7 @@ package com.example.iisl_project.controller;
 import com.example.iisl_project.model.entity.User;
 import com.example.iisl_project.model.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
