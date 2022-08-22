@@ -9,13 +9,13 @@ import javax.persistence.*;
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "ID", nullable = false)
     private Integer id;
 
     @Column(name="ARTICLEID",nullable = false, columnDefinition = "INTEGER")
     private Integer articleId;
 
-    @Column(name="commentConment",nullable = false,columnDefinition = "CHARACTER VARYING(150)")
-    private String commentConment;
+    @Column(name="commentContent",nullable = false,columnDefinition = "CHARACTER VARYING(150)")
+    private String commentContent;
 
 }
