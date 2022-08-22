@@ -21,7 +21,7 @@ public class User {
     private String id;
 
     /**
-     * First and last name
+     * virtual avatar name
      */
     @Column(name = "NAME", columnDefinition = "CHARACTER VARYING(200)", nullable = false)
     private String name;
