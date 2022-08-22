@@ -6,6 +6,9 @@ import javax.persistence.*;
 import javax.print.attribute.standard.MediaSize;
 import java.time.LocalDateTime;
 
+/**
+ * @author Hoxton
+ */
 @Entity
 @Data
 public class Article {

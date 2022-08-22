@@ -1,2 +1,4 @@
-package com.example.iisl_project.controller.model.request.base;public class Request {
+package com.example.iisl_project.controller.model.request.base;
+
+public class Request {
 }
