@@ -42,7 +42,7 @@ public class Article {
     /**
      * create time
      */
-    @Column(name = "CREATE_TIME", columnDefinition = "TIMESTAMP default FORMATDATETIME(LOCALTIMESTAMP(),'yyyy-MM-dd HH:mm:ss'", nullable = false)
+    @Column(name = "CREATE_TIME", columnDefinition = "TIMESTAMP default FORMATDATETIME(LOCALTIMESTAMP(),'yyyy-MM-dd HH:mm:ss')", nullable = false)
     private LocalDateTime createTime;
 
     /**
@@ -50,6 +50,6 @@ public class Article {
      */
     @Column(name = "UPDATE_TIME", columnDefinition = "TIMESTAMP", nullable = true)
     private LocalDateTime updateTime;
-
-
 }
+
+

@@ -15,7 +15,7 @@ public class User {
     private Integer sqe;
 
     /**
-     * Encrypto
+     * Encrypto: identity Card number
      */
     @Column(name = "ID", columnDefinition = "CHARACTER VARYING(150", nullable = false, length = 150)
     private String id;
@@ -35,7 +35,7 @@ public class User {
     /**
      * create time
      */
-    @Column(name = "CREATE_TIME", columnDefinition = "TIMESTAMP default FORMATDATETIME(LOCALTIMESTAMP(),'yyyy-MM-dd HH:mm:ss'", nullable = false)
+    @Column(name = "CREATE_TIME", columnDefinition = "TIMESTAMP default FORMATDATETIME(LOCALTIMESTAMP(), 'yyyy-MM-dd HH:mm:ss')", nullable = false)
     private LocalDateTime createTime;
 
 
