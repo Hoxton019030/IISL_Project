@@ -1,5 +1,7 @@
 package com.example.iisl_project.service;
 
+import com.example.iisl_project.eums.ReturnCodeConst;
+import com.example.iisl_project.exception.APIException;
 import com.example.iisl_project.properties.cipher.RsaProperties;
 import com.example.iisl_project.util.RSAUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +32,17 @@ public class RsaService {
         } catch (NoSuchAlgorithmException | InvalidKeySpecException | BadPaddingException | NoSuchPaddingException |
                  InvalidKeyException | UnsupportedEncodingException | IllegalBlockSizeException e) {
             throw new RuntimeException(e);
+        }
+    }
+    public String readData(String cipherText) {
+        if(StringUtils.isBlank(cipherText)) return cipherText;
+
+        try {
+            return RSAUtil.decryptByPrivateKey(cipherText, rsaProperties.getPrivateKey());
+        } catch (InvalidKeyException | NoSuchAlgorithmException | InvalidKeySpecException | NoSuchPaddingException
+                 | IllegalBlockSizeException | BadPaddingException e) {
+            log.error("decrypting plainText is failed");
+            throw APIException.createAPIException(ReturnCodeConst.F0005);
         }
     }
 }
