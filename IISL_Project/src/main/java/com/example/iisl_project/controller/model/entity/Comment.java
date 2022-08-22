@@ -4,6 +4,10 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+/**
+ * @author Hoxton
+ */
+
 @Entity
 @Data
 public class Comment {

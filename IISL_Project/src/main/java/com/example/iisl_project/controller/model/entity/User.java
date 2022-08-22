@@ -6,6 +6,10 @@ import lombok.Data;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+/**
+ * @author Hoxton
+ */
+
 @Entity
 @Data
 public class User {
